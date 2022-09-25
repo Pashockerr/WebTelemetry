@@ -71,7 +71,6 @@ setInterval(function(){
         }
         else if(connectionLostIndicator.style.visibility == "visible"){
             connectionLostIndicator.style.visibility = "hidden";
-            console.log("Hide");
         }
         var json = xhr.response;
 
