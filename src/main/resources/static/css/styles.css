@@ -1,0 +1,55 @@
+html, body{
+    font-family: sans-serif;
+    background-color: #1D2D50;
+}
+
+.progressbar-container{
+    display: flex;
+    overflow: hidden;
+    width: 50%;
+    height: 50px;
+    border: 1px solid #FCDAB7;
+    margin: 10px;
+}
+
+.progressbar-body{
+    background-color: green;
+    height: 50px;
+    width: 30%;
+}
+
+.horizontal-progressbar-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#title-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.value-label{
+    width: 50%;
+}
+
+h1, h2, h3, h4, h5{
+    color: #FCDAB7;
+    text-align: center;
+}
+
+#hydrogen1-voltage, #hydrogen2-voltage{
+    background-color: #C6D57E;
+}
+
+#hydrogen1-current, #hydrogen2-current{
+    background-color: #D57E7E;
+}
+
+#battery-voltage{
+    background-color: #A2CDCD;
+}
+
+#battery-current{
+    background-color: #FFE1AF;
+}
