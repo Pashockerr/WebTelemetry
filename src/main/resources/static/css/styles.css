@@ -53,3 +53,14 @@ h1, h2, h3, h4, h5{
 #battery-current{
     background-color: #FFE1AF;
 }
+
+#stopwatch-label{
+    text-align: left;
+}
+
+#connection-lost-indicator{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    color: red;
+}

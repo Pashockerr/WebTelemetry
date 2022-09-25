@@ -2,6 +2,7 @@ const voltageText = "Напряжение(В) : ";
 const currentText = "Ток(А) : ";
 
 let h1v = 0, h1c = 0, h2v = 0, h2c = 0, bv = 0, bc = 0, h1vBounds = [0, 0], h1cBounds = [0, 0], h2vBounds = [0, 0], h2cBounds = [0, 0], bvBounds = [0, 0], bcBounds = [0, 0], h1vp = 0, h1cp = 0, h2vp = 0, h2cp = 0, bvp = 0, bcp = 0; //Создание переменных, хранящих числовые значения
+let connectionLostIndicator = document.getElementById("connection-lost-indicator");
 /*
     h1v - Напряжение на первом ВТЭ
     h1c - Ток на первом ВТЭ
@@ -65,6 +66,13 @@ setInterval(function(){
     xhr.responseType = "json";
     xhr.open("GET", "/api/");
     xhr.onloadend = (e) =>{
+        if(xhr.status == 0){
+            connectionLostIndicator.style.visibility = "visible";
+        }
+        else if(connectionLostIndicator.style.visibility == "visible"){
+            connectionLostIndicator.style.visibility = "hidden";
+            console.log("Hide");
+        }
         var json = xhr.response;
 
         h1v = xhr.response["hydrogen1Voltage"];
