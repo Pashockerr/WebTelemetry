@@ -74,27 +74,27 @@ setInterval(function(){
         }
         var json = xhr.response;
 
-        h1v = xhr.response["hydrogen1Voltage"];
+        h1v = xhr.response["v0"];
         h1vBounds[0] = h1v < h1vBounds[0] ? h1v : h1vBounds[0];
         h1vBounds[1] = h1v > h1vBounds[1] ? h1v : h1vBounds[1];
 
-        h1c = xhr.response["hydrogen1Current"];
+        h1c = xhr.response["c0"];
         h1cBounds[0] = h1c < h1cBounds[0] ? h1c : h1cBounds[0];
         h1cBounds[1] = h1c > h1cBounds[1] ? h1c : h1cBounds[1];
 
-        h2v = xhr.response["hydrogen2Voltage"];
+        h2v = xhr.response["v1"];
         h2vBounds[0] = h2v < h2vBounds[0] ? h2v : h2vBounds[0];
         h2vBounds[1] = h2v > h2vBounds[1] ? h2v : h2vBounds[1];
 
-        h2c = xhr.response["hydrogen2Current"];
+        h2c = xhr.response["c1"];
         h2cBounds[0] = h2c < h2cBounds[0] ? h2c : h2cBounds[0];
         h2cBounds[1] = h2c > h2cBounds[1] ? h2c : h2cBounds[1];
 
-        bv = xhr.response["batteryVoltage"];
+        bv = xhr.response["v2"];
         bvBounds[0] = bv < bvBounds[0] ? bv : bvBounds[0];
         bvBounds[1] = bv > bvBounds[1] ? bv : bvBounds[1];
 
-        bc = xhr.response["batteryCurrent"];
+        bc = xhr.response["c2"];
         bcBounds[0] = bc < bcBounds[0] ? bc : bcBounds[0];
         bcBounds[1] = bc > bcBounds[1] ? bc : bcBounds[1];
 
